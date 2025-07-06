@@ -1,0 +1,22 @@
+@use 'mixins';
+@use 'variables';
+
+body, html {
+  margin: 0;
+  padding: 0px;
+  font-family: 'Saira Condensed', sans-serif;
+  scroll-behavior: smooth;
+  background-color: adjust-hue($color: #ffffff, $degrees: 0);
+}
+
+/* ANIMACIÓN DE ENTRADA AL HACER SCROLL */
+.scroll-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+  }
+  
+  .scroll-show {
+    opacity: 1;
+    transform: translateY(0);
+  }

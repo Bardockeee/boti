@@ -1,0 +1,40 @@
+/* =================== FORMULARIO =================== */
+
+@use 'variables';
+@use 'mixins';
+
+.registro-section {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.registro-form {
+  background-color: rgba(0, 0, 0, 0.66);
+  @include mixins.borde-brillante(#ff0000);
+
+  label {
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"] {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+
+    &:focus {
+      outline: none;
+      box-shadow:
+        0 0 8px rgba(255, 0, 0, 0.8),
+        0 0 16px rgba(255, 0, 0, 0.4);
+    }
+  }
+
+
+  .form-check-label {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+  
+
+</head>
+<body>
+
+  
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <span>STORE</span><span>WARS</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="nosotros.html" target="_blank">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html#form" target="_blank">Contacto</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">Servicios</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Reserva de figuras</a></li>
+                <li><a class="dropdown-item" href="#figuras">Preventa exclusiva</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <a href="#" class="btn btn-outline-light ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="bi bi-person"></i> Login
+          </a>
+        </div>
+      </div>
+    </nav>
+  
+
+    <!-- MODAL DE LOGIN -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="background-color: #000; color: white; font-family: 'Orbitron', sans-serif;">
+
+        <div class="modal-header border-1" style="background-color: #700b0b;">
+          <h5 class="modal-title" id="loginModalLabel">Ingresar Usuario</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginUser" class="form-label text-danger">Usuario</label>
+              <input type="text" class="form-control" id="loginUser" placeholder="Nombre de usuario" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label text-danger">Contraseña</label>
+              <input type="password" class="form-control" id="loginPassword" placeholder="Contraseña" required>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-danger">Ingresar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+
+
+  <!-- SLIDER SECCIÓN-->
+  <section id="heroSlider" class="position-relative text-white">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+      <div class="carousel-inner">
+  
+        <div class="carousel-item active">
+          <img src="/img/equipo-sw.avif" class="d-block w-100" alt="Equipo 1">
+        </div>
+  
+        <div class="carousel-item">
+          <img src="/img/darth-vader-red-saber-star-wars-wallpaper-preview.jpg" class="d-block w-100" alt="Equipo 2">
+        </div>
+  
+        <div class="carousel-item">
+          <img src="/img/Hot-Toys-ROTS-Anakin-Preview-1.webp" class="d-block w-100" alt="Equipo 3">
+        </div>
+      </div>
+  
+      <!-- Flechas -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+  
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  
+    <!-- Texto por delante -->
+    <div class="slider-text container position-absolute top-50 start-50 translate-middle text-center">
+      <p class="text-danger fw-bold">Sobre Nosotros</p>
+      <h1 class="fw-bold display-5">Somos una tienda intergaláctica<br><span class="text-danger">y ofrecemos figuras únicas.</span></h1>
+      <p class="lead">Importamos figuras coleccionables desde una galaxia muy muy lejana. Nuestra pasión es ayudarte a completar tu colección con piezas legendarias.</p>
+      <a href="#"class="btn btn-outline-light mt-3">Leer más →</a>
+    </div>
+  </section>
+
+  <!-- SECCION MISION, VISION, VALORES -->
+  <section class="que-hacemos bg-black text-white py-5 scroll-hidden">
+    <div class="container text-center">
+      <h3 class="mb-5">Lo que <span class="text-danger">hacemos</span> ❓</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <h4 class="text-danger">1</h4>
+          <h5 class="fw-bold">Nuestra Visión</h5>
+          <p>Inspirar a cada fan a poseer un pedazo del universo Star Wars.</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-danger">2</h4>
+          <h5 class="fw-bold">Nuestra Misión</h5>
+          <p>Ofrecer figuras únicas, con la mejor calidad de detalles y envío interplanetario.</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-danger">3</h4>
+          <h5 class="fw-bold">Nuestros Valores</h5>
+          <p>Autenticidad, pasión por la saga y atención Jedi personalizada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SECCION EQUIPO -->
+  <section class="equipo">
+    <h3>Nuestro Escuadrón</h3>
+    <h2>Mentes brillantes que <span class="sable-text-rojo">arman galaxias</span></h2>
+  
+    <div class="equipo-item">
+      <img src="/img/rex.jpg" alt="Rex">
+      <p>Rex - Cazador Sith</p>
+    </div>
+  
+    <div class="equipo-item">
+      <img src="/img/mara.webp" alt="Mara Jade">
+      <p>Mara Jade - Jedi Creativa</p>
+    </div>
+  
+    <div class="equipo-item">
+      <img src="/img/wolf.jpg" alt="Wolf">
+      <p>Wolf - Piloto de Envíos</p>
+    </div>
+  
+    <div class="equipo-item">
+      <img src="/img/Cal_Jedi.webp" alt="Cal">
+      <p>Cal - Guardián del Inventario</p>
+    </div>
+  </section>
+  
+  
+  <footer class="footer text-center">
+    <div class="container">
+      <h4>STORE</span><span>WARS</span></h4>
+      <p>
+        Una colección galáctica de figuras premium para fans del Lado Oscuro (y también del Lado Luminoso).
+      </p>
+  
+      <!-- Iconos sociales -->
+      <div class="mb-4 d-flex justify-content-center gap-3">
+        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+      </div>
+  
+      <!-- Enlaces legales -->
+      <div class="mb-3">
+        <a href="#" class="text-decoration-none text-light mx-2">Política</a>
+        <a href="#" class="text-decoration-none text-light mx-2">Términos</a>
+        <a href="#" class="text-decoration-none text-light mx-2">Disclaimer</a>
+      </div>
+  
+      <small class="d-block">© 2025 RODRIGO OLIVARES. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="/js/navbar.js"></script>
+  <script src="/js/scrolleo.js"></script>
+  
+</body>
+</html>

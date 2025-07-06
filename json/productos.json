@@ -1,0 +1,20 @@
+[
+  {
+    "nombre": "Whisky Jack Daniel's",
+    "descripcion": "Botella 750ml - 35° alcohol",
+    "precio": 7990,
+    "imagen": "img/jackdaniel.jpg"
+  },
+  {
+    "nombre": "Vino Tinto",
+    "descripcion": "2x1 Reserva especial",
+    "precio": 4990,
+    "imagen": "img/vinito.jpg"
+  },
+  {
+    "nombre": "Pack Cervezas",
+    "descripcion": "6 botellas por $4.990",
+    "precio": 4990,
+    "imagen": "img/cervecita.jpg"
+  }
+]

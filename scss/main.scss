@@ -1,0 +1,18 @@
+// 1. VARIABLES PERSONALIZADAS ANTES DE BOOTSTRAP
+@import 'variables';
+
+// 2. BOOTSTRAP BASE (usando @import para que funcione con Live Sass)
+@import '../libs/bootstrap/bootstrap/scss/bootstrap';
+
+// 3. UTILIDADES PERSONALIZADAS
+@import 'mixins';
+@import 'global';
+
+// 4. COMPONENTES MODULARES
+@import 'navbar';
+@import 'hero';
+@import 'cards';
+@import 'video';
+@import 'footer';
+@import 'nosotros';
+@import 'contacto';

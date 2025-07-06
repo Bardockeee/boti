@@ -1,0 +1,53 @@
+/* =================== FOOTER =================== */
+
+@use 'variables';
+@use 'mixins';
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.95);
+  font-family: 'Orbitron', sans-serif;
+  border-top: 1px solid rgba(255, 0, 0, 0.2);
+  text-align: center;
+  color: variables.$color-blanco;
+  padding: 3rem 1rem;
+
+  h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  h4 span:last-child{
+    @include mixins.sable-rojo;
+  }
+
+  p {
+    color: variables.$color-blanco;
+    font-size: 0.95rem;
+  }
+
+  a {
+    color: variables.$color-blanco;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: variables.$color-rojo;
+    }
+  }
+
+  .social-icon {
+    @include mixins.flex-center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    color: variables.$color-blanco;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: variables.$color-rojo;
+      color: variables.$color-blanco;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+    }
+  }
+}

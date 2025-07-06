@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* =================== FORMULARIO =================== */
+/* =================== VARIABLES =================== */
+/* =================== MIXINS REUTILIZABLES =================== */
+/* === SOMBRAS DE SABLE === */
+/* === SOMBRA GLOW PARAMETRIZADA === */
+/* === BOTÓN REDONDO PERSONALIZADO === */
+/* === FLEX CENTER === */
+/* === BACKGROUND GALÁCTICO === */
+/* === TRANSICIÓN SUAVE GLOBAL === */
+/* === MEDIA QUERY MOBILE === */
+/* === IMAGEN RESPONSIVA === */
+/* === BORDE BRILLANTE === */
+.registro-section {
+  font-family: "Orbitron", sans-serif;
+}
+
+.registro-form {
+  background-color: rgba(0, 0, 0, 0.66);
+  border: 1px solid rgba(255, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4), 0 0 40px rgba(255, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4), 0 0 40px rgba(255, 0, 0, 0.3);
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+.registro-form label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.registro-form input[type=text],
+.registro-form input[type=password],
+.registro-form input[type=email],
+.registro-form input[type=tel],
+.registro-form input[type=date] {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+.registro-form input[type=text]:focus,
+.registro-form input[type=password]:focus,
+.registro-form input[type=email]:focus,
+.registro-form input[type=tel]:focus,
+.registro-form input[type=date]:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 8px rgba(255, 0, 0, 0.8), 0 0 16px rgba(255, 0, 0, 0.4);
+          box-shadow: 0 0 8px rgba(255, 0, 0, 0.8), 0 0 16px rgba(255, 0, 0, 0.4);
+}
+.registro-form .form-check-label {
+  font-size: 0.85rem;
+}/*# sourceMappingURL=contacto.css.map */

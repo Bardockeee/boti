@@ -1,0 +1,16 @@
+.top-bar {
+  background-color: #052aff;
+  color: white;
+  padding: 1rem;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.4rem;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  z-index: 1000;
+}/*# sourceMappingURL=demo.css.map */

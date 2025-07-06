@@ -1,0 +1,82 @@
+/* =================== MIXINS REUTILIZABLES =================== */
+
+@use 'sass:color';
+
+/* === SOMBRAS DE SABLE === */
+@mixin sable-rojo {
+  text-shadow:
+    0 0 10px rgba(255, 136, 0, 0.8),
+    0 0 20px rgba(255, 123, 0, 0.6),
+    0 0 30px rgba(255, 196, 0, 0.4);
+}
+
+@mixin sable-azul {
+  text-shadow:
+    0 0 8px rgba(7, 23, 255, 0.8),
+    0 0 16px rgba(7, 73, 255, 0.5);
+}
+
+/* === SOMBRA GLOW PARAMETRIZADA === */
+@mixin glow($color, $intensidad: 0.6) {
+  box-shadow: 0 0 15px rgba($color, $intensidad);
+}
+
+/* === BOTÓN REDONDO PERSONALIZADO === */
+@mixin boton-redondo($bg-color, $text-color: white) {
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: bold;
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: color.scale($bg-color, $lightness: -10%);
+    box-shadow: 0 0 10px rgba($bg-color, 0.5);
+  }
+}
+
+/* === FLEX CENTER === */
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === BACKGROUND BOTILLERIA === */
+@mixin fondo-botilleria($img-path) {
+  background-image: url($img-path);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* === TRANSICIÓN SUAVE GLOBAL === */
+@mixin transicion-suave($propiedades: all, $tiempo: 0.3s, $modo: ease) {
+  transition: $propiedades $tiempo $modo;
+}
+
+/* === MEDIA QUERY MOBILE === */
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+/* === IMAGEN RESPONSIVA === */
+@mixin imagen-responsiva {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === BORDE BRILLANTE === */
+@mixin borde-brillante($color) {
+  border: 1px solid rgba($color, 0.6);
+  box-shadow:
+    0 0 10px rgba($color, 0.6),
+    0 0 20px rgba($color, 0.4),
+    0 0 40px rgba($color, 0.3);
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "nombre": "Vino Carmen Reserva Carmenere Frida Kahlo",
+    "imagen": "img/vinoooo.png",
+    "descuento": "-35%",
+    "precioClub": "$3.890",
+    "precioNormal": "$4.500",
+    "precioAnterior": "$5.990"
+  },
+  {
+    "nombre": "Vino 1865 Cabernet Sauvignon 750cc",
+    "imagen": "img/vino2.jpg",
+    "descuento": "-37%",
+    "precioClub": "$9.990",
+    "precioNormal": "$11.990",
+    "precioAnterior": "$15.990"
+  },
+  {
+    "nombre": "Vino Montes Limited Selection Carmenere",
+    "imagen": "img/vino3.jpg",
+    "descuento": "-34%",
+    "precioClub": "$5.990",
+    "precioNormal": "$6.990",
+    "precioAnterior": "$9.000"
+  },
+  {
+    "nombre": "Vino Tarapacá Gran Reserva Etiqueta Azul",
+    "imagen": "img/vino4.jpg",
+    "descuento": "-40%",
+    "precioClub": "$17.990",
+    "precioNormal": "$24.990",
+    "precioAnterior": "$29.990"
+  },
+  {
+    "nombre": "Vino Santa Rita Reserva Merlot",
+    "imagen": "img/vino5.jpg",
+    "descuento": "-30%",
+    "precioClub": "$4.990",
+    "precioNormal": "$6.990",
+    "precioAnterior": "$8.990"
+  },
+  {
+    "nombre": "Vino Concha y Toro Casillero del Diablo Cabernet Sauvignon",
+    "imagen": "img/vino6.jpg",
+    "descuento": "-25%",
+    "precioClub": "$7.490",
+    "precioNormal": "$9.990",
+    "precioAnterior": "$12.990"
+  },
+  {
+    "nombre": "Vino Undurraga Sibaris Gran Reserva Carmenere",
+    "imagen": "img/vino7.jpg",
+    "descuento": "-33%",
+    "precioClub": "$6.990",
+    "precioNormal": "$9.990",
+    "precioAnterior": "$11.990"
+  },
+  {
+    "nombre": "Vino Santa Carolina Reserva Privada Cabernet Sauvignon",
+    "imagen": "img/vino8.jpg",
+    "descuento": "-28%",
+    "precioClub": "$5.490",
+    "precioNormal": "$7.690",
+    "precioAnterior": "$9.990"
+  }
+]

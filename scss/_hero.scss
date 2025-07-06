@@ -1,0 +1,90 @@
+/* =================== HERO + SLIDER =================== */
+
+@use 'variables';
+@use 'mixins';
+
+.hero-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+
+  #heroCarousel {
+    width: 100%;
+    height: 100vh;
+
+    .carousel-inner {
+      width: 100%;
+      height: 100%;
+
+      .carousel-item {
+        height: 100vh;
+
+        .hero-slide {
+          width: 100%;
+          height: 100%;
+        }
+
+        .hero-bg {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    // Estilos para botones (añadido)
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5rem;
+      height: 5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      opacity: 1;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        filter: invert(1) drop-shadow(0 0 3px #fff);
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}
+
+.overlay-card {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+  }
+
+  span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fffdfd;
+  }
+}
+
