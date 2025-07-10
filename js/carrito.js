@@ -32,7 +32,7 @@ function renderizarCarrito() {
   }
 
   let html = `
-    <table class="table table-dark table-hover align-middle">
+    <table class="table table-hover align-middle">
       <thead>
         <tr>
           <th>Producto</th>
@@ -62,9 +62,15 @@ function renderizarCarrito() {
     `;
   });
 
-  html += `
+    html += `
       </tbody>
     </table>
+    <div class="text-end fw-bold fs-5 mt-3">
+      TOTAL: $${carrito.reduce((sum, item) => {
+        const precioNum = parseInt(item.precio.replace(/[^\d]/g, ""));
+        return sum + precioNum * item.cantidad;
+      }, 0).toLocaleString("es-CL")}
+    </div>
   `;
 
   contenedor.innerHTML = html;
@@ -75,6 +81,14 @@ function renderizarCarrito() {
       eliminarProductoDelCarrito(boton.dataset.id);
     });
   });
+
+  // Desactivar botón Pagar si está vacío
+  const btnPagar = document.getElementById("btnPagar");
+  if (btnPagar) {
+    btnPagar.disabled = carrito.length === 0;
+    btnPagar.classList.toggle("disabled", carrito.length === 0);
+  }
+
 }
 
 function eliminarProductoDelCarrito(id) {

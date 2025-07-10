@@ -1,6 +1,14 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const contenedor = document.getElementById("contenedorCarrusel");
-  const res = await fetch("json/destacados.json");
+document.addEventListener("DOMContentLoaded", () => {
+  generarCarrusel("contenedorRecomendados", "json/destacados.json");
+  generarCarrusel("contenedorPacks", "json/packs.json");
+  actualizarContadorCarrito();
+});
+
+async function generarCarrusel(idContenedor, jsonUrl) {
+  const contenedor = document.getElementById(idContenedor);
+  if (!contenedor) return;
+
+  const res = await fetch(jsonUrl);
   const productos = await res.json();
 
   const porSlide = 4;
@@ -15,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const row = document.createElement("div");
     row.className = "row";
 
-    productosSlice.forEach(producto => {
+    productosSlice.forEach((producto, index) => {
       const col = document.createElement("div");
       col.className = "col-md-3";
       col.innerHTML = `
@@ -40,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 class="btn btn-dark btn-sm btn-agregar" 
                 data-nombre="${producto.nombre}" 
                 data-precio="${producto.precioClub}" 
-                data-id="${i}-${producto.nombre.replace(/\s+/g, '-')}">
+                data-id="${idContenedor}-${i}-${index}">
                 AGREGAR
               </button>
             </div>
@@ -54,11 +62,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     contenedor.appendChild(item);
   }
 
-  // Funcionalidad: botones +, -, AGREGAR
+  // Delegación de eventos para este carrusel
   contenedor.addEventListener("click", (e) => {
     const boton = e.target;
 
-    // "+" y "-"
     if (boton.matches("button.btn-outline-dark")) {
       const input = boton.closest(".input-group").querySelector("input");
       let valor = parseInt(input.value);
@@ -70,7 +77,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
 
-    // AGREGAR
     if (boton.matches("button.btn-agregar")) {
       const tarjeta = boton.closest(".card");
       const input = tarjeta.querySelector("input");
@@ -83,10 +89,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         cantidad: cantidad
       };
 
-      // ✅ Usar función global desde carrito.js
       agregarProductoAlCarrito(producto);
 
-      // Feedback visual
       boton.textContent = "AGREGADO ✓";
       boton.disabled = true;
       setTimeout(() => {
@@ -95,7 +99,4 @@ document.addEventListener("DOMContentLoaded", async () => {
       }, 1500);
     }
   });
-
-  // ✅ Al cargar, mostrar contador correcto
-  actualizarContadorCarrito();
-});
+}

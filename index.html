@@ -26,11 +26,6 @@
       <a href="#" id="loginBtn" class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
             <i class="bi bi-person"></i> Login
           </a>
-
-      <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#carritoModal">
-        <i class="bi bi-basket-fill"></i> Carrito (<span id="contadorCarrito">0</span>)
-      </button>
-
     </div>
   </div>
 
@@ -49,7 +44,7 @@
             <li class="nav-item"><a class="nav-link" href="nosotros.html" target="_blank">Nosotros</a></li>
             <li class="nav-item"><a class="nav-link" href="contacto.html#form" target="_blank">Contacto</a></li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">Servicios</a>
+              <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">Categorias</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Reserva de figuras</a></li>
                 <li><a class="dropdown-item" href="#figuras">Preventa exclusiva</a></li>
@@ -62,35 +57,40 @@
             <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
           </form>
 
+          <button class="btn btn-carrito mx-3 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#carritoAside" aria-controls="carritoAside">
+            <i class="bi bi-cart4"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="contadorCarrito">0</span>
+          </button>
+
         <div id="fuerzaMensaje" class="position-fixed top-0 start-50 translate-middle-x p-3 text-center" style="z-index: 1055; display: none;">
           <div class="alert alert-info border border-light text-light fw-bold" style="background: rgb(0, 0, 0); box-shadow: 0 0 20px #00f;">
             🛸 Bienvenido, A NUESTRA BOTILLERIA...
           </div>
         </div>
-
-
-        </div>
       </div>
     </nav>
 
-<div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-scrollable">
-    <div class="modal-content" style="background-color: #000; color: white;">
-      <div class="modal-header">
-        <h5 class="modal-title" id="carritoModalLabel">🛒 Carrito de Compras</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+    <!-- ASIDE del carrito -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="carritoAside" aria-labelledby="carritoAsideLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="carritoAsideLabel">Tu Carrito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
       </div>
-      <div class="modal-body">
-        <div id="contenidoCarrito" class="table-responsive"></div>
-      </div>
-      <div class="modal-footer justify-content-between">
-        <button id="vaciarCarritoBtn" class="btn btn-outline-danger">Vaciar Carrito</button>
-        <button class="btn btn-success" disabled>Finalizar Compra</button>
+
+      <div class="offcanvas-body d-flex flex-column justify-content-between">
+        <!-- Aquí irá la tabla con los productos -->
+        <div id="contenidoCarrito" class="flex-grow-1 mb-3">
+          <!-- Tu JS inyecta acá -->
+        </div>
+
+        <!-- Total + botones -->
+        <div>
+          <button class="btn btn-outline-dark w-100 mb-2" id="vaciarCarritoBtn">Vaciar carrito</button>
+          <button id="btnPagar" class="btn btn-dark w-100 mt-2">Pagar</button>
+
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
 
     <!-- MODAL DE LOGIN -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -140,35 +140,79 @@
   </section>
 
 
-<section id="productosRecomendados" class="py-1">
+  <section id="productosRecomendados" class="py-5 scroll-hidden">
     <div class="container">
       <h2 class="text-center fw-bold mb-4 display-5">NUESTROS RECOMENDADOS</h2>
 
-      <div id="carouselProductos" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner" id="contenedorCarrusel"></div>
+      <div id="carouselRecomendados" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="contenedorRecomendados"></div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductos" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecomendados" data-bs-slide="prev">
+          <span class="btn-carrusel"><i class="bi bi-chevron-left"></i></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselProductos" data-bs-slide="next">
-          <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselRecomendados" data-bs-slide="next">
+          <span class="btn-carrusel"><i class="bi bi-chevron-right"></i></span>
         </button>
+
       </div>
     </div>
   </section>
 
-
-
-
-
-
-
-  
-  <footer class="footer text-center">
+  <section id="packDestacados" class="py-5 scroll-hidden">
     <div class="container">
-      <h4>STORE</span><span>WARS</span></h4>
+      <h2 class="text-center fw-bold mb-4 display-5">PACK DESTACADOS</h2>
+
+      <div id="carouselPacks" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="contenedorPacks"></div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPacks" data-bs-slide="prev">
+          <span class="btn-carrusel"><i class="bi bi-chevron-left"></i></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPacks" data-bs-slide="next">
+          <span class="btn-carrusel"><i class="bi bi-chevron-right"></i></span>
+        </button>
+
+    </div>
+  </section>
+
+  <section class="categorias-destacadas bg-black py-5">
+  <div class="container">
+    <div class="row g-4" id="contenedorCategorias">
+    </div>
+  </div>
+</section>
+
+<section class="banner-recetas py-5">
+  <div class="container">
+    <div class="row g-0 align-items-stretch">
+      <!-- Texto -->
+      <div class="col-md-6 d-flex h-100 text-white contenido-banner">
+        <div class="p-4 my-auto">
+          <h2 class="fw-bold display-5">RECETAS PA`<br>DISFRUTAR</h2>
+          <p class="lead">
+            Sí, la sección que todos tienen. Útil, práctica y perfecta para quienes quieren sorprender por primera vez.
+          </p>
+          <button class="btn btn-banner mt-3">VER TODAS</button>
+        </div>
+      </div>
+
+
+      <!-- Imagen -->
+      <div class="col-md-6">
+        <div class="imagen-banner">
+          <img src="/img/bartender.webp" alt="Recetas" class="img">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer text-center">
+    <div class="container">
+      <h4>Botilleria</span><span>Rosario</span></h4>
       <p>
-        Una colección galáctica de figuras premium para fans del Lado Oscuro (y también del Lado Luminoso).
+        Disfruta de una experiencia única en nuestra botillería.
       </p>
   
       <!-- Iconos sociales -->
@@ -201,6 +245,7 @@
   <script src="/js/hero.js"></script>
   <script src="/js/destacados.js"></script>
   <script src="/js/carrito.js"></script>
+  <script src="/js/categorias.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,38 @@
+[
+  {
+    "nombre": "Cervezas",
+    "imagen": "img/cat-cerveza.jpeg",
+    "descuento": "HASTA 46% OFF",
+    "url": "#"
+  },
+  {
+    "nombre": "Ron",
+    "imagen": "img/cat-ron.jpeg",
+    "descuento": "HASTA 51% OFF",
+    "url": "#"
+  },
+  {
+    "nombre": "Piscos",
+    "imagen": "img/cat-pisco.jpeg",
+    "descuento": "HASTA 50% OFF",
+    "url": "#"
+  },
+  {
+    "nombre": "Vinos",
+    "imagen": "img/cat-vino.jpeg",
+    "descuento": "HASTA 60% OFF",
+    "url": "#"
+  },
+  {
+    "nombre": "Whiskey",
+    "imagen": "img/cat-whiskey.jpeg",
+    "descuento": "HASTA 43% OFF",
+    "url": "#"
+  },
+  {
+    "nombre": "Gin",
+    "imagen": "img/cat-gin.jpeg",
+    "descuento": "HASTA 51% OFF",
+    "url": "#"
+  }
+]

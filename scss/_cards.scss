@@ -39,33 +39,105 @@
 }
 
 
-#carouselProductos {
-  position: relative;
-
+#carouselRecomendados,
+#carouselPacks {
   .carousel-control-prev,
   .carousel-control-next {
-    width: 5%;
-    top: 35%;
+    top: 40%;
     transform: translateY(-50%);
     z-index: 2;
-    transition: all 0.3s ease;
+    width: auto;
 
-    span {
-      background-color: rgba(253, 253, 253, 0.856);
+    span.btn-carrusel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 45px;
+      height: 45px;
+      background-color: rgba(255, 5, 5, 0.8);
       border-radius: 50%;
-      padding: 1.5rem;
-    }
+      color: #000;
+      font-size: 1.5rem;
+      transition: background-color 0.3s ease;
 
-    &:hover span {
-      background-color: #851c1c;
+      &:hover {
+        background-color: #000;
+        color: #ff0202;
+      }
     }
   }
 
   .carousel-control-prev {
-    left: -3%;
+    left: -2.5rem; // puedes ajustar
   }
 
   .carousel-control-next {
-    right: -3%;
+    right: -2.5rem;
+  }
+}
+
+.categoria-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  height: 500px;
+  
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 50%, transparent);
+    color: white;
+
+    .descuento {
+      background-color: red;
+      padding: 0.25rem 0.75rem;
+      font-weight: bold;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+    }
+
+    .titulo {
+      font-size: 2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      border-radius: 2px;
+      font-size: 0.75rem;
+      padding: 0.4rem 0.75rem;
+      border: 1px solid white;
+      text-transform: uppercase;
+
+      i {
+    margin-left: 0.25rem;
+      }
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+
+  &:hover img {
+    transform: scale(1.05);
   }
 }
