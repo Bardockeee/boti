@@ -3,6 +3,38 @@
 @use 'variables';
 @use 'mixins';
 
+
+.hero-nosotros {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    filter: brightness(0.4);
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  }
+
+  h1, p {
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+
 .que-hacemos {
   background-color: #000;
   padding: 60px 0;

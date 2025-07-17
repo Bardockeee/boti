@@ -1,0 +1,26 @@
+[
+  {
+    "nombre": "Vino Concha y Toro Reserva",
+    "imagen": "img/vino1.jpg",
+    "descuento": "-15%",
+    "precioClub": "$4.990",
+    "precioAnterior": "$5.990",
+    "precioNormal": "$6.490"
+  },
+  {
+    "nombre": "Vino Gato Negro Cabernet",
+    "imagen": "img/vino2.jpg",
+    "descuento": "-10%",
+    "precioClub": "$3.990",
+    "precioAnterior": "$4.490",
+    "precioNormal": "$4.990"
+  },
+  {
+    "nombre": "Vino Santa Rita 120 Merlot",
+    "imagen": "img/vino3.jpg",
+    "descuento": "-12%",
+    "precioClub": "$3.790",
+    "precioAnterior": "$4.290",
+    "precioNormal": "$4.790"
+  }
+]
